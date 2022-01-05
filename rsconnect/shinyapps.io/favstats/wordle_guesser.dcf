@@ -1,0 +1,13 @@
+name: wordle_guesser
+title: wordle_guesser
+username:
+account: favstats
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5398457
+bundleId: 5437748
+url: https://favstats.shinyapps.io/wordle_guesser/
+when: 1641411164.35285
+lastSyncTime: 1641411164.35285
+asMultiple: FALSE
+asStatic: FALSE
