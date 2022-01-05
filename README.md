@@ -3,12 +3,11 @@
 Want to excel at Wordle but don't know how?
 Impress your friends and put in as little effort as possible?
 
-A #ShinyApp that helps you guess Wordle solutions based on code by 
-@coolbutuseless
- .
+A #ShinyApp that helps you guess Wordle solutions based on code by @coolbutuseless.
 
 https://favstats.shinyapps.io/wordle_guesser/
 
+![](https://pbs.twimg.com/media/FIXMz25XIAU_VXy?format=png&name=900x900)
 
 "But isn't this cheating?"
 Yes.
