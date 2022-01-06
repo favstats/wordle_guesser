@@ -119,9 +119,9 @@ server <- function(input, output, session) {
       print(wrongs)
       
       choices <- filter_words(wordle_dict, 
-                            exact = paste0(replaceEmpty(lets), collapse = ""), 
-                            excluded_letters = input$excl,
-                            wrong_spot = wrongs)
+                            exact = paste0(tolower(replaceEmpty(lets)), collapse = ""), 
+                            excluded_letters = tolower(input$excl),
+                            wrong_spot = tolower(wrongs))
 
       choices <- sample(choices, size = ifelse(length(choices)<40, length(choices), 40))
       
