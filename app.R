@@ -111,8 +111,12 @@ server <- function(input, output, session) {
         
     if(all_empty){
       
-      choices <- sample(wordle_dict, size = ifelse(length(wordle_dict)<40, length(wordle_dict), 40))
+      sort_me <- merge(final_word_scores, data.frame(guess = wordle_dict), all.y = T, by.y = "guess")
       
+      choices <- sort_me[order(sort_me$score),]$guess
+      
+      choices <- as.character(na.omit(choices[1:100]))
+            
     } else if (!all_empty){
       
       print(paste0(replaceEmpty(lets), collapse = ""))
@@ -123,7 +127,13 @@ server <- function(input, output, session) {
                             excluded_letters = tolower(input$excl),
                             wrong_spot = tolower(wrongs))
 
-      choices <- sample(choices, size = ifelse(length(choices)<40, length(choices), 40))
+      sort_me <- merge(final_word_scores, data.frame(guess = choices), all.y = T, by.y = "guess")
+      
+      choices <- sort_me[order(sort_me$score),]$guess
+      
+      choices <- as.character(na.omit(choices[1:300]))
+      
+      # choices <- sample(choices, size = ifelse(length(choices)<40, length(choices), 40))
       
       choices
     }

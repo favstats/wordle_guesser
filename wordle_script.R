@@ -99,3 +99,5 @@ filter_words <- function(words, exact = ".....", excluded_letters = "", wrong_sp
 letter_freqs  <- strsplit('etaoinshrdlcumwfgypbvkjxqz', '')[[1]]
 letter_scores <- setNames(1:26, letter_freqs)
 score_letters <- function(letters) sum(letter_scores[tolower(letters)])
+
+final_word_scores <- readRDS("data/final_word_scores.rds")
