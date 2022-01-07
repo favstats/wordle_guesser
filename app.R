@@ -111,11 +111,19 @@ server <- function(input, output, session) {
         
     if(all_empty){
       
-      sort_me <- merge(final_word_scores, data.frame(guess = wordle_dict), all.y = T, by.y = "guess")
+      if(runif(1, 0 , 1) > 0.5){
+        sort_me <- merge(final_word_scores, data.frame(guess = wordle_dict), all.y = T, by.y = "guess")
+        
+        choices <- sort_me[order(sort_me$score),]$guess
+        
+        choices <- as.character(na.omit(choices[1:100]))        
+      } else {
+        
+        choices <- sample(wordle_dict, size = 100)       
+        
+      }
       
-      choices <- sort_me[order(sort_me$score),]$guess
-      
-      choices <- as.character(na.omit(choices[1:100]))
+
             
     } else if (!all_empty){
       

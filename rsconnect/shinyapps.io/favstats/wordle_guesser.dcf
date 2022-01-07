@@ -5,10 +5,10 @@ account: favstats
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5398457
-bundleId: 5440146
+bundleId: 5442152
 url: https://favstats.shinyapps.io/wordle_guesser/
-when: 1641474028.65372
-lastSyncTime: 1641474028.65372
+when: 1641515285.42043
+lastSyncTime: 1641515285.42043
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: README.md
